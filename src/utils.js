@@ -31,6 +31,8 @@ export function addEscapeListener(f) {
   });
 }
 
+// Hack to add classes to an imported SVG module, pending adding the capability
+// to the modules themselves.
 export function svg(src, classes) {
   return src.replace("<svg ", "<svg class=\"" + classes + "\" ");
 }
